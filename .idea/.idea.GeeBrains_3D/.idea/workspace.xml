@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0c012c73-45d7-4c3a-9d02-d6159b5e6ee8" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-668349624">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cs" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="C#" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="cs" value="1225" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="C#" value="1225" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/BaseController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1549142148982" expanded="false" signature="6:78" ph="..." />
+                <marker date="1549142148982" expanded="true" signature="125:284" ph="{...}" />
+                <marker date="1549142148982" expanded="true" signature="199:225" ph="{...}" />
+                <marker date="1549142148982" expanded="true" signature="255:282" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/TorchController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+              <folding>
+                <marker date="1549142148987" expanded="false" signature="6:100" ph="..." />
+                <marker date="1549142148987" expanded="true" signature="124:1948" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="180:1946" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="689:936" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="958:1035" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="1058:1497" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="1080:1225" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="1195:1219" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="1233:1410" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="1361:1405" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="1544:1611" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="1639:1775" ph="{...}" />
+                <marker date="1549142148987" expanded="true" signature="1804:1943" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/Main.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1549142148986" expanded="false" signature="6:98" ph="..." />
+                <marker date="1549142148986" expanded="true" signature="126:184" ph="/// Точка входа в программу ... " />
+                <marker date="1549142148986" expanded="true" signature="228:1122" ph="{...}" />
+                <marker date="1549142148986" expanded="true" signature="261:298" ph="{...}" />
+                <marker date="1549142148986" expanded="true" signature="481:733" ph="{...}" />
+                <marker date="1549142148986" expanded="false" signature="737:1113" ph="Property" />
+                <marker date="1549142148986" expanded="true" signature="763:828" ph="/// Получить контроллер фонарика ... " />
+                <marker date="1549142148986" expanded="true" signature="873:917" ph="{...}" />
+                <marker date="1549142148986" expanded="true" signature="921:1016" ph="/// Получить контроллер ввода данных ... " />
+                <marker date="1549142148986" expanded="true" signature="1063:1099" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/InputController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+              <folding>
+                <marker date="1549142148984" expanded="false" signature="6:78" ph="..." />
+                <marker date="1549142148984" expanded="true" signature="102:573" ph="{...}" />
+                <marker date="1549142148984" expanded="true" signature="106:188" ph="/// Контроллер, который отвечает за горячие клавиши ... " />
+                <marker date="1549142148984" expanded="true" signature="242:571" ph="{...}" />
+                <marker date="1549142148984" expanded="true" signature="314:568" ph="{...}" />
+                <marker date="1549142148984" expanded="true" signature="354:564" ph="{...}" />
+                <marker date="1549142148984" expanded="true" signature="436:492" ph="{...}" />
+                <marker date="1549142148984" expanded="true" signature="501:558" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2F14D49E-DC70-4940-AEE5-57642343F344/10/c8032de5/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Script/InputController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Script/TorchController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Script/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/Script/Main.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scenes/Script/BaseController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Script/TourchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Script/Main.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Script/TorchController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Script/InputController.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1986" />
+    <option name="y" value="24" />
+    <option name="width" value="1657" />
+    <option name="height" value="928" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c012c73-45d7-4c3a-9d02-d6159b5e6ee8" name="Default Changelist" comment="" />
+      <created>1549051257677</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1549051257677</updated>
+      <workItem from="1549051268034" duration="678000" />
+      <workItem from="1549052860965" duration="4827000" />
+      <workItem from="1549105419034" duration="8026000" />
+      <workItem from="1549144262683" duration="571000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="14102000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1986" y="24" width="1657" height="928" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2586099" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Build" order="15" visible="true" weight="0.28416485" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/tourch.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/TourchController.cs" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2F14D49E-DC70-4940-AEE5-57642343F344/10/c8032de5/GameObject.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="506" column="36" selection-start-line="506" selection-start-column="36" selection-end-line="506" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/Torch UI.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/BaseController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1549142148982" expanded="false" signature="6:78" ph="..." />
+            <marker date="1549142148982" expanded="true" signature="125:284" ph="{...}" />
+            <marker date="1549142148982" expanded="true" signature="199:225" ph="{...}" />
+            <marker date="1549142148982" expanded="true" signature="255:282" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/TorchController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+          <folding>
+            <marker date="1549142148987" expanded="false" signature="6:100" ph="..." />
+            <marker date="1549142148987" expanded="true" signature="124:1948" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="180:1946" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="689:936" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="958:1035" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="1058:1497" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="1080:1225" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="1195:1219" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="1233:1410" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="1361:1405" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="1544:1611" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="1639:1775" ph="{...}" />
+            <marker date="1549142148987" expanded="true" signature="1804:1943" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/Main.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1549142148986" expanded="false" signature="6:98" ph="..." />
+            <marker date="1549142148986" expanded="true" signature="126:184" ph="/// Точка входа в программу ... " />
+            <marker date="1549142148986" expanded="true" signature="228:1122" ph="{...}" />
+            <marker date="1549142148986" expanded="true" signature="261:298" ph="{...}" />
+            <marker date="1549142148986" expanded="true" signature="481:733" ph="{...}" />
+            <marker date="1549142148986" expanded="false" signature="737:1113" ph="Property" />
+            <marker date="1549142148986" expanded="true" signature="763:828" ph="/// Получить контроллер фонарика ... " />
+            <marker date="1549142148986" expanded="true" signature="873:917" ph="{...}" />
+            <marker date="1549142148986" expanded="true" signature="921:1016" ph="/// Получить контроллер ввода данных ... " />
+            <marker date="1549142148986" expanded="true" signature="1063:1099" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Script/InputController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding>
+            <marker date="1549142148984" expanded="false" signature="6:78" ph="..." />
+            <marker date="1549142148984" expanded="true" signature="102:573" ph="{...}" />
+            <marker date="1549142148984" expanded="true" signature="106:188" ph="/// Контроллер, который отвечает за горячие клавиши ... " />
+            <marker date="1549142148984" expanded="true" signature="242:571" ph="{...}" />
+            <marker date="1549142148984" expanded="true" signature="314:568" ph="{...}" />
+            <marker date="1549142148984" expanded="true" signature="354:564" ph="{...}" />
+            <marker date="1549142148984" expanded="true" signature="436:492" ph="{...}" />
+            <marker date="1549142148984" expanded="true" signature="501:558" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
