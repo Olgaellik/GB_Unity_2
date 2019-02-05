@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MyController;
+using My.Helper;
+using My.Objects;
 
-namespace MyController
-{
+
 	/// <summary>
 	/// Точка входа в программу
 	/// </summary>
-	
+
 	public sealed class Main : MonoBehaviour
 	{
 		public static Main Instance
@@ -21,12 +22,30 @@ namespace MyController
 		private TorchController _torchController;
 		private static Main _instance;
 
+		private WeaponController _weaponController;
+		private ObjectManager _objectManager;
+		
+		public enum MouseButton
+		{
+			LeftButton,
+			RightButton,
+			CenterButton
+		}
+		
 		void Start()
 		{
 			_instance = this;
 			_controllersGameObject = new GameObject {name = "Controllers"};
 			_inputController = _controllersGameObject.AddComponent<InputController>();
 			_torchController = _controllersGameObject.AddComponent<TorchController>();
+			_weaponController = _controllersGameObject.AddComponent<WeaponController>();
+			_objectManager = GetComponent<ObjectManager>();
+			if (_objectManager == null)
+			{
+				Debug.LogError("Not found ObjectManager");
+			}
+
+			//_objectManager = _controllersGameObject.AddComponent<ObjectManager>();
 		}
 
 		#region Property      
@@ -49,11 +68,19 @@ namespace MyController
 		{
 			return _inputController;
 		}
+		
+		public WeaponController GetWeaponsController()
+		{
+			return _weaponController;
+		}
+		
+		public ObjectManager GetManagerObject()
+		{
+			return _objectManager;
+		}
 
 		#endregion
 
 
-		
 
 	}
-}
