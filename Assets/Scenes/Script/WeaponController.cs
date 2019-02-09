@@ -12,7 +12,7 @@ public class WeaponController : BaseController
 	private Weapon _weapon;
 	[SerializeField]
 	private Ammunition _ammunition;
-	//private int _mouseButton = (int) Main.MouseButton.LeftButton;
+	private int _mouseButton = (int) Main.MouseButton.RightButton;
 	public Weapon SelectedWeapon              // Оружие, которое сейчас выбрано
 	{
 		get { return _weapon; }
@@ -20,10 +20,10 @@ public class WeaponController : BaseController
 	public void Update()
 	{
 		if (!Enabled) return;
-		//if (Input.GetMouseButton(_mouseButton)) // Если зажата левая кнопка мыши
-		//{
-		//	SelectedWeapon.Fire(_ammunition);
-		//}
+		if (Input.GetMouseButton(_mouseButton)) // Если зажата правая кнопка мыши
+		{
+			SelectedWeapon.Fire(_ammunition);
+		}
 	}
 	
 	
@@ -34,7 +34,7 @@ public class WeaponController : BaseController
 		
 		_weapon = weapon;
 		_ammunition = ammunition;
-		//_weapon.IsVisible = true;
+		weapon.IsVisible = true;
 		_weapon.gameObject.SetActive(true);
 	}
 	
@@ -45,7 +45,7 @@ public class WeaponController : BaseController
 				
 		if (_weapon == null)
 			return; 
-		//_weapon.IsVisible = false;
+		_weapon.IsVisible = false;
 		_weapon.gameObject.SetActive(false);
 		_weapon = null;
 		_ammunition = null;

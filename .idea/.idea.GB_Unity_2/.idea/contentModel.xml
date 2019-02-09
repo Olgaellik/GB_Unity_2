@@ -170,17 +170,19 @@
             <e p="Arrow.cs" t="Include" />
             <e p="BaseController.cs" t="Include" />
             <e p="BaseObjectScene.cs" t="Include" />
-            <e p="Camera_conroll.cs" t="Include" />
-            <e p="Character_Movement.cs" t="Include" />
+            <e p="CameraControll.cs" t="Include" />
             <e p="DestroyByCooldown.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="ImmortalEnemy.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="ISetDamage.cs" t="Include" />
+            <e p="LookAtCamera.cs" t="Include" />
             <e p="Main.cs" t="Include" />
             <e p="ObjectManager.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
             <e p="RangeWeapons.cs" t="Include" />
             <e p="SuperTankEnemy.cs" t="Include" />
+            <e p="TeammateIcon.cs" t="Include" />
             <e p="TeammateModel.cs" t="Include" />
             <e p="TeammatesController.cs" t="Include" />
             <e p="Timer.cs" t="Include" />

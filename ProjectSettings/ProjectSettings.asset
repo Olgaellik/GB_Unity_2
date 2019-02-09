@@ -653,7 +653,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 9b0c9c43-531d-4262-bb7d-207bad03929d
   projectName: GeeBrains_3D
   organizationId: olga-ellik
