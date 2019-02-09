@@ -24,7 +24,9 @@ using My.Objects;
 
 		private WeaponController _weaponController;
 		private ObjectManager _objectManager;
-		
+
+		public TeammatesController TeammatesController { get; private set; }
+
 		public enum MouseButton
 		{
 			LeftButton,
@@ -39,13 +41,14 @@ using My.Objects;
 			_inputController = _controllersGameObject.AddComponent<InputController>();
 			_torchController = _controllersGameObject.AddComponent<TorchController>();
 			_weaponController = _controllersGameObject.AddComponent<WeaponController>();
+			TeammatesController = _controllersGameObject.AddComponent<TeammatesController>();
 			_objectManager = GetComponent<ObjectManager>();
 			if (_objectManager == null)
 			{
 				Debug.LogError("Not found ObjectManager");
 			}
 
-			//_objectManager = _controllersGameObject.AddComponent<ObjectManager>();
+		
 		}
 
 		#region Property      

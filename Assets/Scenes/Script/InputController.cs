@@ -24,6 +24,7 @@ public class InputController : BaseController
             {
                 Main.Instance.GetTorchController.Off();
             }
+
         }
 
         // Меняем оружие по нажатию клавиш
@@ -41,6 +42,7 @@ public class InputController : BaseController
 
         if (Input.GetAxisRaw("Mouse ScrollWheel") > 0)
         {
+            Debug.Log("Mouse ScrollWhee");
             _indexWeapons += 1;
             _isSelectWeapons = false;
         }
@@ -51,7 +53,12 @@ public class InputController : BaseController
             _isSelectWeapons = false;
         }
 
-        
+        if (Input.GetButtonDown("TeammateCommand"))
+        {
+            Debug.Log("input TeammateCommand");
+            Main.Instance.TeammatesController.MoveCommand();
+        }
+
 // Меняем оружие колесиком        
         if (_isSelectWeapons) return;
 
@@ -68,29 +75,18 @@ public class InputController : BaseController
         {
             _indexWeapons = 0;
         }
-/*		for (var index = 0; index < mo.GetWeaponsList.Length; index++)
-		{
-			var weapon = mo.GetWeaponsList[index];
-			if (index == _indexWeapons)
-			{
-				wc.On(mo.GetWeaponsList[_indexWeapons], mo.GetAmmunitionList[_indexWeapons]);
-			}
-			else
-			{
-				(mo.GetWeaponsList[_indexWeapons], mo.GetAmmunitionList[_indexWeapons]);
-			}
-		}*/
-
+        
         var weapon = mo.GetWeaponsList[_indexWeapons];
         Debug.Log("Try select2 " + weapon);
         if (weapon)
         {
             Debug.Log("Try select3 " + weapon);
             wc.Off();
-            // Передаем в контроллер стрельбы чем и из чего стрелять
+           
             wc.On(weapon, mo.GetAmmunitionList[_indexWeapons]);
         }
-
+ 
         _isSelectWeapons = true;
+
     }
 }

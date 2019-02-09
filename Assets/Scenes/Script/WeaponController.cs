@@ -12,7 +12,7 @@ public class WeaponController : BaseController
 	private Weapon _weapon;
 	[SerializeField]
 	private Ammunition _ammunition;
-	private int _mouseButton = (int) Main.MouseButton.LeftButton;
+	//private int _mouseButton = (int) Main.MouseButton.LeftButton;
 	public Weapon SelectedWeapon              // Оружие, которое сейчас выбрано
 	{
 		get { return _weapon; }
@@ -20,10 +20,10 @@ public class WeaponController : BaseController
 	public void Update()
 	{
 		if (!Enabled) return;
-		if (Input.GetMouseButton(_mouseButton)) // Если зажата левая кнопка мыши
-		{
-			SelectedWeapon.Fire(_ammunition);
-		}
+		//if (Input.GetMouseButton(_mouseButton)) // Если зажата левая кнопка мыши
+		//{
+		//	SelectedWeapon.Fire(_ammunition);
+		//}
 	}
 	
 	
