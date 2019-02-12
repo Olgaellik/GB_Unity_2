@@ -20,6 +20,13 @@
             </e>
           </e>
         </e>
+        <e p="FantasyMonstersZolrik" t="Include">
+          <e p="Scene" t="Include">
+            <e p="Script" t="Include">
+              <e p="buttondemo2.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="ProCore" t="Include">
           <e p="ProBuilder" t="Include">
             <e p="About" t="Include">
@@ -144,6 +151,14 @@
             </e>
           </e>
         </e>
+        <e p="RPG Food &amp; Drinks Pack" t="Include">
+          <e p="Assets" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="Consumer.cs" t="Include" />
+              <e p="Rotator.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="SampleScenes" t="Include">
           <e p="Menu" t="Include">
             <e p="Scripts" t="Include">
@@ -176,13 +191,16 @@
             <e p="Enemy.cs" t="Include" />
             <e p="Enemybot.cs" t="Include" />
             <e p="EnemyBotsController.cs" t="Include" />
+            <e p="HealPotion.cs" t="Include" />
             <e p="ImmortalEnemy.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="ISetDamage.cs" t="Include" />
             <e p="LookAtCamera.cs" t="Include" />
             <e p="Main.cs" t="Include" />
+            <e p="MeleeWeapons.cs" t="Include" />
             <e p="ObjectManager.cs" t="Include" />
             <e p="Player.cs" t="Include" />
+            <e p="RangeEnemyWeapons.cs" t="Include" />
             <e p="RangeWeapons.cs" t="Include" />
             <e p="SuperTankEnemy.cs" t="Include" />
             <e p="TeammateIcon.cs" t="Include" />

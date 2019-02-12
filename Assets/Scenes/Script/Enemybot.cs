@@ -9,176 +9,192 @@ using Random = UnityEngine.Random;
 
 public class Enemybot : MonoBehaviour, ISetDamage
 {
-	public Transform EyesTransform;
-	
-	public float SearchDistance = 40f;
-	public float AttackDistance = 20f;
+    public Transform EyesTransform;
 
-	private float maxRandomRadius;
-	private bool useRandomWP;
-	
-	private Waypoint[] waypoints;
-	private int currentWP;
-	private float currentWPTimeout;
-	
-	private NavMeshAgent agent;
-	private Vector3 randomPos;
-	private Transform targetTransform;
-	private Weapon weapon;
+    public float SearchDistance = 40f;
+    public float RangeDistance = 20f;
+    public float MeleeDistance = 5f;
 
-	public void Initialization(BotSpawnParams spawnParams)
+    private float maxRandomRadius;
+    private bool useRandomWP;
 
-	{
-		useRandomWP = waypoints.Length <= 1;
-		maxRandomRadius = Mathf.Max(2, spawnParams.MaxRandomRadius);
-		waypoints = spawnParams.Waypoints;
-		SearchDistance = Math.Max(2,spawnParams.SearchDistance);
-		AttackDistance = Math.Max(2,spawnParams.AttackDistance);
-		
-		agent = GetComponent<NavMeshAgent>();
-		weapon = GetComponentInChildren<Weapon>(true);
+    private Waypoint[] waypoints;
+    private int currentWP;
+    private float currentWPTimeout;
 
-		Main.Instance.EnemyBotsController.AddBot(this);
-	}
+    private NavMeshAgent agent;
+    private Vector3 randomPos;
+    private Transform targetTransform;
+    public Weapon weaponmelee;
+    public Weapon weaponrange;
+    public Ammunition RangeAmmution;
 
-	public void SetTarget(Transform target)
-	{
-		targetTransform = target;
-	}
+    public void Initialization(BotSpawnParams spawnParams)
 
-	private void Update()
-	{
-	
-		if (CurrentHealth <= 0) return;
-		//Проверка возможности атаки
+    {
+        waypoints = spawnParams.Waypoints;
+        useRandomWP = waypoints.Length <= 1;
+        maxRandomRadius = Mathf.Max(2, spawnParams.MaxRandomRadius);
+        SearchDistance = Math.Max(2, spawnParams.SearchDistance);
+        //RangeDistance = Math.Max(2,spawnParams.AttackDistance);
+        //MeleeDistance = Math.Max(2,spawnParams.AttackDistance);
 
-		var isTargetSeen = false;
+        agent = GetComponent<NavMeshAgent>();
 
-		if (targetTransform)
+        //weapon = GetComponentInChildren<Weapon>(true);
 
-		{
-			var dist = Vector3.Distance(transform.position, targetTransform.position);
-			if (dist < SearchDistance)
-			{
-				isTargetSeen = CheckTarget();
-				if (isTargetSeen)
-					agent.SetDestination(targetTransform.position);
-			}
 
-			if (dist < AttackDistance && isTargetSeen)
-				weapon.Fire(null);
-		}
+        Main.Instance.EnemyBotsController.AddBot(this);
+    }
 
-		if (isTargetSeen) return;
+    public void SetTarget(Transform target)
+    {
+        targetTransform = target;
+    }
 
-		if (useRandomWP)
-		{
-			agent.SetDestination(randomPos);
-			if (!agent.hasPath || agent.remainingDistance > maxRandomRadius * 2) randomPos = GenerateWaypoint();
-		}
-		else
-		{
-			agent.SetDestination(waypoints[currentWP].transform.position);
-			if (!agent.hasPath)
-			{
-				currentWPTimeout += Time.deltaTime;
-				if (currentWPTimeout >= waypoints[currentWP].WaitTime)
+    private void Update()
+    {
+        if (CurrentHealth <= 0) return;
+        //Проверка возможности атаки
 
-				{
-					currentWPTimeout = 0;
-					currentWP++;
-					if (currentWP >= waypoints.Length) currentWP = 0;
-				}
-			}
+        var isTargetSeen = false;
 
-		}
-	}
+        if (targetTransform)
 
-	[SerializeField] 
-	
-	private float currentHealth = 100f;
-	public float CurrentHealth
-	{
-		get { return currentHealth; }
-		set { currentHealth = value; }
-	}
+        {
+            var dist = Vector3.Distance(transform.position, targetTransform.position);
+            if (dist < SearchDistance)
+            {
+                isTargetSeen = CheckTarget();
+                if (isTargetSeen)
+                    agent.SetDestination(targetTransform.position);
+            }
 
-	public void ApplyDamage(float damage)
-	{
-		if (CurrentHealth <= 0) return;
-		CurrentHealth -= damage;
-		if (CurrentHealth <= 0) Death();
-	}
+            //Debug.Log(dist);
+            if (dist < MeleeDistance && isTargetSeen)
+            {
+                weaponmelee.Fire(null);
+            }
+            else if (dist < RangeDistance && isTargetSeen)
+            {
+                weaponrange.Fire(RangeAmmution);
+            }
+        }
 
-	private void Death()
+        if (isTargetSeen) return;
 
-	{
-		foreach (var c in GetComponentsInChildren<Transform>())
+        if (useRandomWP)
+        {
+            agent.SetDestination(randomPos);
+            if (!agent.hasPath || agent.remainingDistance > maxRandomRadius * 2) randomPos = GenerateWaypoint();
+        }
+        else
+        {
+            agent.SetDestination(waypoints[currentWP].transform.position);
+            if (!agent.hasPath)
+            {
+                currentWPTimeout += Time.deltaTime;
+                if (currentWPTimeout >= waypoints[currentWP].WaitTime)
 
-		{
-			c.SetParent(null);
-			Destroy(c.gameObject, Random.Range(2f, 4f));
+                {
+                    currentWPTimeout = 0;
+                    currentWP++;
+                    if (currentWP >= waypoints.Length) currentWP = 0;
+                }
+            }
+        }
+    }
 
-			var col = c.GetComponent<Collider>();
+    [SerializeField] private float currentHealth = 100f;
 
-			if (col) col.enabled = true;
+    public float CurrentHealth
+    {
+        get { return currentHealth; }
+        set { currentHealth = value; }
+    }
 
-			var rb = c.gameObject.AddComponent<Rigidbody>();
-			rb.mass = 5;
-			rb.AddForce(Vector3.up * Random.Range(10f, 30f), ForceMode.Impulse);
-		}
+    public void ApplyDamage(float damage)
+    {
+        if (CurrentHealth <= 0) return;
+        CurrentHealth -= damage;
+        if (CurrentHealth <= 0) Death();
+    }
 
-		Main.Instance.EnemyBotsController.RemoveBot(this);
-	}
+    public Animator anim;
+    private void Death()
 
-	private bool CheckTarget()
-	{
-		RaycastHit hit;
-		if (Physics.Linecast(EyesTransform.position, targetTransform.position, out hit) &&
-		    hit.transform == targetTransform)
-		{
-			return true;
-		}
+    {
+        anim.SetTrigger("die");
+        Destroy(gameObject, 3f);
+        //foreach (var c in GetComponentsInChildren<Transform>())
 
-		if (Physics.Linecast(EyesTransform.position, targetTransform.position + Vector3.up * 0.5f, out hit) &&
-		    hit.transform == targetTransform)
-		{
-			return true;
-		}
+        //{
+            
+            //c.SetParent(null);
+           
+            
+            
+/*
+            var col = c.GetComponent<Collider>();
 
-		if (Physics.Linecast(EyesTransform.position, targetTransform.position - Vector3.up * 0.5f, out hit) &&
-		    hit.transform == targetTransform)
-		{
-			return true;
-		}
+            if (col) col.enabled = true;
 
-		//if (Physics.Linecast(EyesTransform.position + result, out hit, maxRandomRadius * 1.5f, NavMesh.AllAreas))
-		//	return hit.position;
+            var rb = c.gameObject.AddComponent<Rigidbody>();
+            rb.mass = 5;
+            rb.AddForce(Vector3.up * Random.Range(10f, 30f), ForceMode.Impulse);
+            */
+        //}
 
-		//return transform.position;
-		return false;
+        Main.Instance.EnemyBotsController.RemoveBot(this);
+    }
 
-	}
+    private bool CheckTarget()
+    {
+        RaycastHit hit;
+        if (Physics.Linecast(EyesTransform.position, targetTransform.position, out hit) &&
+            hit.transform == targetTransform)
+        {
+            return true;
+        }
 
-	private Vector3 GenerateWaypoint()
+        if (Physics.Linecast(EyesTransform.position, targetTransform.position + Vector3.up * 0.5f, out hit) &&
+            hit.transform == targetTransform)
+        {
+            return true;
+        }
 
-	{
-		var result = maxRandomRadius * Random.insideUnitSphere;
-	
-		
-		NavMeshHit hit;
-		if (NavMesh.SamplePosition(transform.position + result, out hit, maxRandomRadius * 1.5f, NavMesh.AllAreas))
-			return hit.position;
-		else return transform.position;
-	}
-	
-	[Serializable]
-	public class BotSpawnParams
+        if (Physics.Linecast(EyesTransform.position, targetTransform.position - Vector3.up * 0.5f, out hit) &&
+            hit.transform == targetTransform)
+        {
+            return true;
+        }
 
-	{
-		public float AttackDistance;
-		public float SearchDistance;
-		public Waypoint[] Waypoints;
-		public float MaxRandomRadius;
-	}
+        //if (Physics.Linecast(EyesTransform.position + result, out hit, maxRandomRadius * 1.5f, NavMesh.AllAreas))
+        //	return hit.position;
+
+        //return transform.position;
+        return false;
+    }
+
+    private Vector3 GenerateWaypoint()
+
+    {
+        var result = maxRandomRadius * Random.insideUnitSphere;
+
+
+        NavMeshHit hit;
+        if (NavMesh.SamplePosition(transform.position + result, out hit, maxRandomRadius * 1.5f, NavMesh.AllAreas))
+            return hit.position;
+        else return transform.position;
+    }
+
+    [Serializable]
+    public class BotSpawnParams
+
+    {
+        public float AttackDistance;
+        public float SearchDistance;
+        public Waypoint[] Waypoints;
+        public float MaxRandomRadius;
+    }
 }
