@@ -11,6 +11,7 @@ public class Enemy : BaseObjectScene, ISetDamage
     private float step = 2f;
 
     private float _maxHp;
+    private ISetDamage _setDamageImplementation;
 
     protected override void Awake()
     {
@@ -40,6 +41,8 @@ public class Enemy : BaseObjectScene, ISetDamage
             Destroy(InstanceObject, 5f);
         }
     }
+
+    public float CurrentHealth { get; }
 
     public virtual void ApplyDamage(float damage)
     {

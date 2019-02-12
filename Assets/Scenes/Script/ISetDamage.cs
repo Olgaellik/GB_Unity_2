@@ -8,6 +8,7 @@ namespace My.Interface
 {
 	public interface ISetDamage
 	{
+		float CurrentHealth { get; }
 		void ApplyDamage(float damage);
 	}
 }

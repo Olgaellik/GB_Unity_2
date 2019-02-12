@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MyController;
@@ -6,9 +7,6 @@ using My.Helper;
 using My.Objects;
 
 
-	/// <summary>
-	/// Точка входа в программу
-	/// </summary>
 
 	public sealed class Main : MonoBehaviour
 	{
@@ -26,6 +24,17 @@ using My.Objects;
 		private ObjectManager _objectManager;
 
 		public TeammatesController TeammatesController { get; private set; }
+		public EnemyBotsController EnemyBotsController { get; private set; }
+		
+//		public PlayerModel PlayerModel { get; private set; }
+//		public event Action<PlayerModel> PlayerChanged; 
+
+		// public void SetPlayer(PlayerModel player)
+
+//		{
+//			PlayerModel = player;
+//			PlayerChanged?.Invoke(player);
+//		}
 
 		public enum MouseButton
 		{
@@ -42,6 +51,7 @@ using My.Objects;
 			_torchController = _controllersGameObject.AddComponent<TorchController>();
 			_weaponController = _controllersGameObject.AddComponent<WeaponController>();
 			TeammatesController = _controllersGameObject.AddComponent<TeammatesController>();
+			EnemyBotsController = _controllersGameObject.AddComponent<EnemyBotsController>();
 			_objectManager = GetComponent<ObjectManager>();
 			if (_objectManager == null)
 			{

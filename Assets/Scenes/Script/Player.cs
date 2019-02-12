@@ -8,7 +8,16 @@ public class Player : MonoBehaviour
 
 	public float movementSpeed = 10;
 	public float turningSpeed = 60;
- 
+
+	public static Player Instance; 
+	private void Awake()
+	{
+		if (Instance == null)
+		{
+			Instance = this;
+		}
+	}
+
 	void Update() {
 		float horizontal = Input.GetAxis("Horizontal") * turningSpeed * Time.deltaTime;
 		transform.Rotate(0, horizontal, 0);

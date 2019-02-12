@@ -170,9 +170,12 @@
             <e p="Arrow.cs" t="Include" />
             <e p="BaseController.cs" t="Include" />
             <e p="BaseObjectScene.cs" t="Include" />
+            <e p="BotSpawner.cs" t="Include" />
             <e p="CameraControll.cs" t="Include" />
             <e p="DestroyByCooldown.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
+            <e p="Enemybot.cs" t="Include" />
+            <e p="EnemyBotsController.cs" t="Include" />
             <e p="ImmortalEnemy.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="ISetDamage.cs" t="Include" />
@@ -187,6 +190,7 @@
             <e p="TeammatesController.cs" t="Include" />
             <e p="Timer.cs" t="Include" />
             <e p="TorchController.cs" t="Include" />
+            <e p="Waypoint.cs" t="Include" />
             <e p="Weapon.cs" t="Include" />
             <e p="WeaponController.cs" t="Include" />
           </e>
