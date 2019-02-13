@@ -194,11 +194,13 @@
             <e p="HealPotion.cs" t="Include" />
             <e p="ImmortalEnemy.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
+            <e p="Ipoolable.cs" t="Include" />
             <e p="ISetDamage.cs" t="Include" />
             <e p="LookAtCamera.cs" t="Include" />
             <e p="Main.cs" t="Include" />
             <e p="MeleeWeapons.cs" t="Include" />
             <e p="ObjectManager.cs" t="Include" />
+            <e p="ObjectsPool.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="RangeEnemyWeapons.cs" t="Include" />
             <e p="RangeWeapons.cs" t="Include" />

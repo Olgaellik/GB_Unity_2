@@ -10,7 +10,8 @@ using MyController;
 	{ 
 		[SerializeField] private Ammunition[] _ammunitionList = new Ammunition[5]; 
 		[SerializeField] private Weapon[] _weaponsList = new Weapon [5];
-		#region Property	
+
+		
 		public Weapon[] GetWeaponsList
 		{
 			get { return _weaponsList; }
@@ -19,7 +20,7 @@ using MyController;
 		{
 			get { return _ammunitionList; }
 		} 
-		#endregion
+		
 
 		private void Start()
 		{

@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using My.Interface;
 using UnityEngine;
 using MyController;
 
-public class Arrow : Ammunition {
+public class Arrow : Ammunition
+{
 
 	// Время жизни пули
 	[SerializeField] private float _timeToDestruct = 10;
@@ -14,17 +16,22 @@ public class Arrow : Ammunition {
 	// Текущий урон, который может нанести пуля
 	
 	private float _currentDamage;
-	
-	
+
+//	[SerializeField] private string poolID = "Arrow01";
+//	public override string PoolID => poolID;
+//
+//	[SerializeField] private int ObjectsCount = 20;
+//	public override int ObjectsCount => objectsCount;
+		
 	protected override void Awake()
 	{
 		base.Awake();
-		// Если пуля не встретит ничего, то через заданное время пуля самоуничтожится
 		
 		Destroy(InstanceObject, _timeToDestruct);       
 		_currentDamage = _damage;
 		GetRigidbody.mass = _mass;
 	}
+
 	// Если пуля встретила препятствие
 	
 	private void OnCollisionEnter(Collision collision)    
@@ -38,9 +45,9 @@ public class Arrow : Ammunition {
 		//Debug.Log(transform.position);
 		
 		SetDamage(collision.gameObject.GetComponent<ISetDamage>());
-		// Тут можно дописать функционал: например, на месте столкновения создавать частицы (искры, пыль) и с помощью декалей вставлять дырки от пуль
 		
-		Destroy(InstanceObject);          // Удаляем пулю
+		
+		Destroy(InstanceObject); 
 	}
 
 	private void SetDamage(ISetDamage obj)
@@ -49,4 +56,6 @@ public class Arrow : Ammunition {
 			obj.ApplyDamage((_currentDamage));
 
 	}
+	
+	
 }

@@ -2908,8 +2908,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EyesTransform: {fileID: 4867454495220928}
-  SearchDistance: 20
-  RangeDistance: 20
+  SearchDistance: 5
+  RangeDistance: 3
   MeleeDistance: 2.5
   weaponmelee: {fileID: 114601065687628684}
   weaponrange: {fileID: 114776170500518124}
