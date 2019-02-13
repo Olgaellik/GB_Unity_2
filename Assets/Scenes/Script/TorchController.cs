@@ -31,7 +31,7 @@ namespace MyController
 		}
 		public void Update()
 		{
-			if (IsEnabled)
+			if (Enabled)
 			{
 				CurrentCharge -= Time.deltaTime * ChargePerSecond; //скорость расхода энергии
 				if (CurrentCharge <= 0)
@@ -59,13 +59,13 @@ namespace MyController
 		}
 		public override void On()
 		{
-			if (IsEnabled) return;          // Если контроллер включен, повторно не включаем
+			if (Enabled) return;          // Если контроллер включен, повторно не включаем
 			base.On();
 			SetActiveFlashlight(true);
 		}
 		public override void Off()
 		{
-			if (!IsEnabled) return;        // Если контроллер выключен, повторно не выключаем
+			if (!Enabled) return;        // Если контроллер выключен, повторно не выключаем
 			base.Off();
 			SetActiveFlashlight(false);
 		}

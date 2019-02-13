@@ -55,7 +55,7 @@ namespace MySpecialNamespace.Actions
 		{
 			// Using pb_EditorToolbarLoader.GetInstance keeps MakeFacesDoubleSided as a singleton.
 			MakeFacesDoubleSided instance = pb_EditorToolbarLoader.GetInstance<MakeFacesDoubleSided>();
-			return instance != null && instance.IsEnabled();
+			return instance != null && instance.Enabled();
 		}
 
 		[MenuItem("Tools/ProBuilder/Geometry/Make Faces Double-Sided", false, pb_Constant.MENU_GEOMETRY + 3)]
@@ -90,7 +90,7 @@ namespace MySpecialNamespace.Actions
 		/**
 		 *	Determines if the action should be enabled or grayed out.
 		 */
-		public override bool IsEnabled()
+		public override bool Enabled()
 		{
 			// `selection` is a helper property on pb_MenuAction that returns a pb_Object[] array from the current selection.
 			return 	pb_Editor.instance != null &&

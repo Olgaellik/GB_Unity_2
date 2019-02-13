@@ -59,7 +59,7 @@ namespace ProBuilder2.Actions
 		{
 			// Using pb_EditorToolbarLoader.GetInstance keeps MakeFacesDoubleSided as a singleton.
 			CreateShadowObject instance = pb_EditorToolbarLoader.GetInstance<CreateShadowObject>();
-			return instance != null && instance.IsEnabled();
+			return instance != null && instance.Enabled();
 		}
 
 		[MenuItem("Tools/ProBuilder/Object/Create Shadow Object", false, pb_Constant.MENU_GEOMETRY + 3)]
@@ -103,7 +103,7 @@ namespace ProBuilder2.Actions
 		/**
 		 *	Determines if the action should be enabled or grayed out.
 		 */
-		public override bool IsEnabled()
+		public override bool Enabled()
 		{
 			// `selection` is a helper property on pb_MenuAction that returns a pb_Object[] array from the current selection.
 			return 	pb_Editor.instance != null &&
