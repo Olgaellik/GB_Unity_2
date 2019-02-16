@@ -9,7 +9,7 @@ public class MyEditor : EditorWindow
     public GameObject Obj1;
     public GameObject Obj2;
     public GameObject Obj3;
-    string _nameObject = "Hello World";
+    string _nameObject = "New editor object";
     bool groupEnabled;
     bool _randomColor = true;
     int _countObject = 1;
@@ -43,11 +43,11 @@ public class MyEditor : EditorWindow
         //	_choiceIndex = 0;
 
         Obj1 =
-            EditorGUILayout.ObjectField("Объект 1", Obj1, typeof(GameObject), true) as GameObject;
+            EditorGUILayout.ObjectField("Object 1", Obj1, typeof(GameObject), true) as GameObject;
         Obj2 =
-            EditorGUILayout.ObjectField("Объект 2", Obj2, typeof(GameObject), true) as GameObject;
+            EditorGUILayout.ObjectField("Object 2", Obj2, typeof(GameObject), true) as GameObject;
         Obj3 =
-            EditorGUILayout.ObjectField("Объект 3", Obj3, typeof(GameObject), true) as GameObject;
+            EditorGUILayout.ObjectField("Object 3", Obj3, typeof(GameObject), true) as GameObject;
 
         _minPos = EditorGUILayout.Vector3Field("Min Pos", _minPos);
         _maxPos = EditorGUILayout.Vector3Field("Max Pos", _maxPos);
@@ -61,24 +61,26 @@ public class MyEditor : EditorWindow
             objs.Add(Obj3);
         
         
-        _nameObject = EditorGUILayout.TextField("Имя объекта", _nameObject);
-        groupEnabled = EditorGUILayout.BeginToggleGroup("Дополнительные настройки", groupEnabled);
-        _randomColor = EditorGUILayout.Toggle("Случайный цвет", _randomColor);
-        _countObject = EditorGUILayout.IntSlider("Количество объектов", _countObject, 1, 100);
+        _nameObject = EditorGUILayout.TextField("Object name", _nameObject);
+        groupEnabled = EditorGUILayout.BeginToggleGroup("More settings", groupEnabled);
+        _randomColor = EditorGUILayout.Toggle("Random colour", _randomColor);
+        _countObject = EditorGUILayout.IntSlider("Number of objects", _countObject, 1, 100);
         //_radius = EditorGUILayout.Slider("Радиус окружности", _radius, 10, 50);
         EditorGUILayout.EndToggleGroup();
         GUI.backgroundColor = Color.green;
-        if (GUILayout.Button("Создать объекты"))
+        if (GUILayout.Button("Generate objects"))
         {
             Spawn(objs);
         }
                 
-        GUI.backgroundColor = Color.red;
-        if (GUILayout.Button("Уничтожить новые объекты"))
+        GUI.backgroundColor = Color.grey;
+        if (GUILayout.Button("Remove last created objects"))
         {
             RemoveSpawn();
         }
-        if (GUILayout.Button("Уничтожить все объекты"))
+        
+        GUI.backgroundColor = Color.red;
+        if (GUILayout.Button("Remove all created objects"))
         {
             RemoveAllSpawn();
         }
