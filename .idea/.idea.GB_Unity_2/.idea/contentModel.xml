@@ -20,11 +20,19 @@
             </e>
           </e>
         </e>
+        <e p="BonusScript.cs" t="Include" />
         <e p="FantasyMonstersZolrik" t="Include">
           <e p="Scene" t="Include">
             <e p="Script" t="Include">
               <e p="buttondemo2.cs" t="Include" />
             </e>
+          </e>
+        </e>
+        <e p="Lesson5" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Lesson5.cs" t="Include" />
+            <e p="Lesson5Editor.cs" t="Include" />
+            <e p="MyEditor.cs" t="Include" />
           </e>
         </e>
         <e p="ProCore" t="Include">
