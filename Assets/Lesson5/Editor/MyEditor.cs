@@ -13,7 +13,7 @@ public class MyEditor : EditorWindow
     bool groupEnabled;
     bool _randomColor = true;
     int _countObject = 1;
-    float _radius = 10;
+    //float _radius = 10;
 
     public Object source;
 
@@ -23,14 +23,14 @@ public class MyEditor : EditorWindow
         Color.red
     };
 
-    [MenuItem("MyEditor/Items")]
+    [MenuItem("MyEditor/GenerateObjects")]
     public static void ShowWindow()
     {
         var win = EditorWindow.GetWindow(typeof(MyEditor));
         win.minSize = new Vector2(600, 400);
     }
 
-    int _choiceIndex = 0;
+    //int _choiceIndex = 0;
 
     private Vector3 _minPos, _maxPos;
     
