@@ -26,16 +26,18 @@ public class MyEditor : EditorWindow
     [MenuItem("MyEditor/Items")]
     public static void ShowWindow()
     {
-        EditorWindow.GetWindow(typeof(MyEditor));
+        var win = EditorWindow.GetWindow(typeof(MyEditor));
+        win.minSize = new Vector2(600, 400);
     }
 
     int _choiceIndex = 0;
 
     private Vector3 _minPos, _maxPos;
+    
     private List<GameObject> _objs = new List<GameObject>();
     void OnGUI()
     {
-        GUILayout.Label("Настройки", EditorStyles.boldLabel);
+        GUILayout.Label("Settings", EditorStyles.boldLabel,GUILayout.Height(30));
 
         //Obj1 = EditorGUILayout.Popup("Выбери объект",Obj1);
         //_choiceIndex = EditorGUILayout.Popup("Выбери объект",_choiceIndex, _choices);
@@ -49,6 +51,8 @@ public class MyEditor : EditorWindow
         Obj3 =
             EditorGUILayout.ObjectField("Object 3", Obj3, typeof(GameObject), true) as GameObject;
 
+        GUILayout.Space(10);
+        
         _minPos = EditorGUILayout.Vector3Field("Min Pos", _minPos);
         _maxPos = EditorGUILayout.Vector3Field("Max Pos", _maxPos);
         
@@ -60,30 +64,43 @@ public class MyEditor : EditorWindow
         if (Obj3!=null)
             objs.Add(Obj3);
         
-        
+        GUILayout.Space(10);
         _nameObject = EditorGUILayout.TextField("Object name", _nameObject);
+        
+        GUILayout.Space(20);
         groupEnabled = EditorGUILayout.BeginToggleGroup("More settings", groupEnabled);
         _randomColor = EditorGUILayout.Toggle("Random colour", _randomColor);
         _countObject = EditorGUILayout.IntSlider("Number of objects", _countObject, 1, 100);
         //_radius = EditorGUILayout.Slider("Радиус окружности", _radius, 10, 50);
+        
+        GUILayout.Space(30);
         EditorGUILayout.EndToggleGroup();
         GUI.backgroundColor = Color.green;
-        if (GUILayout.Button("Generate objects"))
+        if (GUILayout.Button("Generate objects", GUILayout.Height(50)))
         {
             Spawn(objs);
         }
+        
+        GUILayout.BeginHorizontal();
+        GUI.backgroundColor = Color.cyan;
+        if (GUILayout.Button("Check and create unique names", GUILayout.Height(50)))
+        {
+            UniqueNames.CheckUniquenames();
+        }
                 
         GUI.backgroundColor = Color.grey;
-        if (GUILayout.Button("Remove last created objects"))
+        if (GUILayout.Button("Remove last created objects", GUILayout.Height(50)))
         {
             RemoveSpawn();
         }
         
         GUI.backgroundColor = Color.red;
-        if (GUILayout.Button("Remove all created objects"))
+        if (GUILayout.Button("Remove all created objects", GUILayout.Height(50)))
         {
             RemoveAllSpawn();
         }
+        
+        GUILayout.EndHorizontal();
     }
 
     void RemoveSpawn()

@@ -32,9 +32,13 @@
           <e p="Editor" t="Include">
             <e p="BonusScriptEditor.cs" t="Include" />
             <e p="MyEditor.cs" t="Include" />
+            <e p="SaveLoadObjects.cs" t="Include" />
           </e>
           <e p="Lesson5.cs" t="Include" />
           <e p="Lesson5Editor.cs" t="Include" />
+          <e p="SerializableGameObject.cs" t="Include" />
+          <e p="SerializableToXML.cs" t="Include" />
+          <e p="UniqueNames.cs" t="Include" />
         </e>
         <e p="ProCore" t="Include">
           <e p="ProBuilder" t="Include">
