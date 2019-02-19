@@ -20,6 +20,8 @@
             </e>
           </e>
         </e>
+        <e p="data.txt" t="Include" />
+        <e p="dataxml.xml" t="Include" />
         <e p="FantasyMonstersZolrik" t="Include">
           <e p="Scene" t="Include">
             <e p="Script" t="Include">
@@ -40,7 +42,21 @@
           <e p="SerializableToXML.cs" t="Include" />
           <e p="UniqueNames.cs" t="Include" />
         </e>
-        <e p="LevelData.xml" t="Include" />
+        <e p="Lesson6" t="Include">
+          <e p="Crypto.cs" t="Include" />
+          <e p="DataManager.cs" t="Include" />
+          <e p="DataTest.cs" t="Include" />
+          <e p="HealsMinesLoad.cs" t="Include" />
+          <e p="IDataProvider.cs" t="Include" />
+          <e p="JsonData.cs" t="Include" />
+          <e p="MakeRadarObject.cs" t="Include" />
+          <e p="PlayerData.cs" t="Include" />
+          <e p="PlayerDataContainer.cs" t="Include" />
+          <e p="PlayerPrefsData.cs" t="Include" />
+          <e p="Radar.cs" t="Include" />
+          <e p="StreamData.cs" t="Include" />
+          <e p="XMLData.cs" t="Include" />
+        </e>
         <e p="ProCore" t="Include">
           <e p="ProBuilder" t="Include">
             <e p="About" t="Include">

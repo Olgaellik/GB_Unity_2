@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 114004292130811318}
   - component: {fileID: 114601065687628684}
   - component: {fileID: 114776170500518124}
+  - component: {fileID: 114451382579977682}
   m_Layer: 0
   m_Name: EnemyPrefab
   m_TagString: Untagged
@@ -2908,8 +2909,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EyesTransform: {fileID: 4867454495220928}
-  SearchDistance: 5
-  RangeDistance: 3
+  SearchDistance: 15
+  RangeDistance: 10
   MeleeDistance: 2.5
   weaponmelee: {fileID: 114601065687628684}
   weaponrange: {fileID: 114776170500518124}
@@ -2917,6 +2918,18 @@ MonoBehaviour:
     type: 2}
   currentHealth: 100
   anim: {fileID: 95265361292710676}
+--- !u!114 &114451382579977682
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322706711943592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31cd76360b6690446849c27c7117e352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Image: {fileID: 114399336263319928, guid: 548bd72e5ba222541a7a7f7f1e2ebb93, type: 2}
 --- !u!114 &114601065687628684
 MonoBehaviour:
   m_ObjectHideFlags: 1

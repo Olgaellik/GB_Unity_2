@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class UniqueNames
 
 {
     private static readonly Dictionary<string, int> _nameDictionary = new Dictionary<string, int>();
-
+#if UNITY_EDITOR
     [MenuItem("MyEditor/Uniquenames")]
-
+#endif
 public static void CheckUniquenames()
     {
         var sceneObj = GameObject.FindObjectsOfType(typeof(GameObject)) as GameObject[];                                  // Находим все объекты на сцене
