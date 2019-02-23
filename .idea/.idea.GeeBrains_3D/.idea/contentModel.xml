@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\olgae\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\olgae\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_GeeBrains_3D.-635858997.00" t="ExcludeRecursive" />
-    <e p="C:\Users\olgae\Documents\GeeBrains_3D" t="IncludeRecursive">
+    <e p="C:\Users\olgae\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_GeeBrains_3D.-1513388054.00" t="ExcludeRecursive" />
+    <e p="C:\Users\olgae\Documents\GitHub\GB_Unity_2" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="_Creepy_Cat" t="Include">
+          <e p="3D Games Effects Pack Free" t="Include">
+            <e p="_FAQ - Informations" t="Include">
+              <e p="Help Readme SOS.txt" t="Include" />
+            </e>
+            <e p="Example_02" t="Include">
+              <e p="Help Readme SOS.txt" t="Include" />
+              <e p="InstanceExample.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="ProCore" t="Include">
           <e p="ProBuilder" t="Include">
             <e p="About" t="Include">
@@ -131,12 +142,47 @@
             </e>
           </e>
         </e>
+        <e p="SampleScenes" t="Include">
+          <e p="Menu" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="MenuSceneLoader.cs" t="Include" />
+              <e p="PauseMenu.cs" t="Include" />
+              <e p="SceneAndURLLoader.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="CameraSwitch.cs" t="Include" />
+            <e p="LevelReset.cs" t="Include" />
+            <e p="ParticleSceneControls.cs" t="Include" />
+            <e p="PlaceTargetWithMouse.cs" t="Include" />
+            <e p="SlowMoButton.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="Skybox-Procedural.shader" t="Include" />
+          </e>
+        </e>
         <e p="Scenes" t="Include">
           <e p="Script" t="Include">
+            <e p="AgilityEnemy.cs" t="Include" />
+            <e p="Ammunition.cs" t="Include" />
+            <e p="Arrow.cs" t="Include" />
             <e p="BaseController.cs" t="Include" />
+            <e p="BaseObjectScene.cs" t="Include" />
+            <e p="Camera_conroll.cs" t="Include" />
+            <e p="Character_Movement.cs" t="Include" />
+            <e p="DestroyByCooldown.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
+            <e p="ImmortalEnemy.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
+            <e p="ISetDamage.cs" t="Include" />
             <e p="Main.cs" t="Include" />
+            <e p="ObjectManager.cs" t="Include" />
+            <e p="RangeWeapons.cs" t="Include" />
+            <e p="SuperTankEnemy.cs" t="Include" />
+            <e p="Timer.cs" t="Include" />
             <e p="TorchController.cs" t="Include" />
+            <e p="Weapon.cs" t="Include" />
+            <e p="WeaponController.cs" t="Include" />
           </e>
         </e>
       </e>

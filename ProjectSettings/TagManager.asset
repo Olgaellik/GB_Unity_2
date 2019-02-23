@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - UI
+  - EditorObjects
   layers:
   - Default
   - TransparentFX
